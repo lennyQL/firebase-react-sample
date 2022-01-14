@@ -8,9 +8,12 @@ const App = memo(() => {
 
   return (
     <>
+      <hr/>
       {messages.map((message) => (
         <Message key={message.key} message={message} />
       ))}
+      
+      <hr/>
       <input type="text" value={data.name} onChange={(e) => setNameFunc(e)} />
       <input type="text" value={data.text} onChange={(e) => setTextFunc(e)} />
       <button onClick={() => pushMessageToFirebase()}>push</button>
